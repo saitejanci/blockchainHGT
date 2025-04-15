@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e8f5e9;
+    color: #333;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #81c784;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+nav ul li a:hover, nav ul li a.active {
+    background-color: #388e3c;
+    transition: background-color 0.3s;
+}
+h2 {
+    color: #2e7d32;
+}
+p {
+    line-height: 1.6;
+}
+#connect-wallet {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#connect-wallet:hover {
+    background-color: #388e3c;
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+#connect-wallet:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+}
+#account-display {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+.tabcontent {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+header {
+    position: relative;
+}
+#disconnect-wallet {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+#disconnect-wallet:hover {
+    background-color: #d32f2f;
+    transition: background-color 0.2s;
+}
+#add-goal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+#add-goal-form label {
+    font-weight: bold;
+    color: #2e7d32;
+}
+#add-goal-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#add-goal-form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#add-goal-form button:hover {
+    background-color: #388e3c;
+}
+#goal-status {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+#token-balance {
+    font-weight: bold;
+    color: #2e7d32;
+}
+#goals-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+#goals-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+#goals-error {
+    color: #e53935;
+    font-weight: bold;
+}
+#add-goal-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 100px;
+    resize: vertical;
+}
+#admin-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+#admin-options h3 {
+    margin: 10px 0 5px;
+    color: #2e7d32;
+}
+#admin-options label {
+    font-weight: bold;
+    color: #2e7d32;
+}
+#admin-options input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#admin-options button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#admin-options button:hover {
+    background-color: #388e3c;
+}
+#stats-display, #reset-status {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+.health-tip {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+#health-tip-text {
+    font-size: 16px;
+    color: #333;
+    background-color: #f0f8f0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #4caf50;
+}
+#refresh-tip {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+#refresh-tip:hover {
+    background-color: #388e3c;
+}
+#welcome-animation {
+    text-align: center;
+    margin-top: 20px;
+}
+.welcome-graphic {
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite ease-in-out;
+}
+#welcome-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e7d32;
+    background-color: #f0f8f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    opacity: 0;
+}
+.welcome-animate {
+    animation: fadeIn 1s ease-out forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

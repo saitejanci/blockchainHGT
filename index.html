@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Goal Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.4/dist/web3.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Health Goal Tracker</h1>
+        <button id="disconnect-wallet" style="display: none;">Disconnect Wallet</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home" class="tablinks active" onclick="openTab(event, 'home')">Home</a></li>
+            <li><a href="#add-goal" class="tablinks" onclick="openTab(event, 'add-goal')">Add Goal</a></li>
+            <li><a href="#my-goals" class="tablinks" onclick="openTab(event, 'my-goals')">My Goals</a></li>
+            <li><a href="#health-insights" class="tablinks" onclick="openTab(event, 'health-insights')">Health Insights</a></li>
+            <li id="settingsTab" style="display: none;"><a href="#settings" class="tablinks" onclick="openTab(event, 'settings')">Settings (Admin)</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="tabcontent" style="display: block;">
+        <h2>Welcome to Your Health Journey!</h2>
+        <p>Track your daily health goals, earn tokens, and stay motivated!</p>
+        <button id="connect-wallet">Connect Wallet</button>
+        <div id="account-display" style="display: none;">
+            <p>Connected: <span id="account"></span></p>
+        </div>
+        <div id="welcome-animation" style="display: none;">
+            <div class="welcome-graphic">🏃‍♂️</div>
+            <p id="welcome-message" class="welcome-animate"></p>
+        </div>
+    </div>
+    <div id="add-goal" class="tabcontent" style="display: none;">
+        <h2>Add a Goal</h2>
+        <div id="add-goal-form">
+            <label for="goal-description">Goal Description:</label>
+            <input type="text" id="goal-description" placeholder="e.g., Walked 5,000 steps" required>
+            <label for="goal-note">Note (optional):</label>
+            <textarea id="goal-note" placeholder="e.g., I walked in the park!"></textarea>
+            <label for="goal-ipfs-hash">IPFS Hash (optional, auto-filled):</label>
+            <input type="text" id="goal-ipfs-hash" placeholder="e.g., QmTestHash123" readonly>
+            <button id="submit-goal">Add Goal</button>
+            <p id="goal-status"></p>
+        </div>
+    </div>
+    <div id="my-goals" class="tabcontent" style="display: none;">
+        <h2>My Goals</h2>
+        <p id="token-balance"></p>
+        <ul id="goals-list"></ul>
+        <p id="goals-error"></p>
+    </div>
+    <div id="health-insights" class="tabcontent" style="display: none;">
+        <h2>Health Insights</h2>
+        <p>Discover tips and fun facts to keep you motivated on your wellness journey!</p>
+        <div class="health-tip">
+            <p id="health-tip-text">Click the button to get a health tip or fun fact!</p>
+            <button id="refresh-tip">Get Another Tip</button>
+        </div>
+    </div>
+    <div id="settings" class="tabcontent" style="display: none;">
+        <h2>Settings (Admin Only)</h2>
+        <div id="admin-options">
+            <h3>Admin Dashboard</h3>
+            <button id="get-stats">Get App Statistics</button>
+            <p id="stats-display"></p>
+            <h3>Reset User Data</h3>
+            <label for="reset-address">User Address:</label>
+            <input type="text" id="reset-address" placeholder="e.g., 0x123...">
+            <button id="reset-user">Reset User</button>
+            <p id="reset-status"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
